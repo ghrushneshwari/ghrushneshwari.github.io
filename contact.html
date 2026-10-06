@@ -1,61 +1,195 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W4SPZF7Z');</script>
-<!-- End Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TBVZ346G');
+    </script>
+    <!-- End Google Tag Manager -->
 
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Digital Marketing Services</title>
+
+    <title>Contact Us - Ghrushneshwari Digital Marketing Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        #success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4SPZF7Z"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBVZ346G"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for digital marketing services.</p>
+    </header>
 
     <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact Us</a>
-</nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact Us</a>
+    </nav>
 
-    <h1>Contact Us</h1>
+    <div class="container">
 
-    <p>Want to generate more leads for your business?</p>
+        <h2>Get a Free Consultation</h2>
 
-    <p>Email: practice@example.com</p>
+        <form id="lead-form">
 
-    <p>Phone: +91 98765 43210</p>
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+            >
 
-    <h2>Get in Touch</h2>
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
 
-    <form>
-        <label>Name:</label><br>
-        <input type="text"><br><br>
+            <label for="message">Message:</label>
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
 
-        <label>Email:</label><br>
-        <input type="email"><br><br>
+            <button type="submit" id="submit-lead-form">
+                Submit
+            </button>
 
-        <label>Message:</label><br>
-        <textarea></textarea><br><br>
+        </form>
 
-        <button type="submit">Submit</button>
-    </form>
+        <div id="success-message">
+            <strong>Thank you!</strong><br>
+            Your enquiry has been submitted successfully.
+        </div>
 
-    <br>
+    </div>
 
-    <a href="index.html">← Back to Home</a>
+    <script>
+        document.getElementById("lead-form").addEventListener("submit", function(event) {
+
+            // Prevent the page from refreshing
+            event.preventDefault();
+
+            // Hide the form
+            document.getElementById("lead-form").style.display = "none";
+
+            // Show success message
+            document.getElementById("success-message").style.display = "block";
+
+            // Send a custom event to Google Tag Manager
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: "lead_form_success"
+            });
+
+        });
+    </script>
 
 </body>
 </html>
+```
+
